@@ -18,16 +18,15 @@ This is a simplified Ruby application designed to process image and PDF files. I
 
 1. Clone this repository to your local machine:
 
-  ```
-		git clone https://github.com/yourusername/file-processing-app.git
-		cd file-processing-app
-	```
+```
+git clone https://github.com/yourusername/file-processing-app.git
+cd file-processing-app
+```
 
 2. Install dependencies:
 
 	```
-		bundle install
-	```
+	bundle install
 
 # Usage
 The application accepts two main arguments:
@@ -39,30 +38,27 @@ The application accepts two main arguments:
 1. Generate Preview:
 
 	```
-		ruby app.rb -f test-file.pdf -c preview
-		This will generate an image preview for the test-file.pdf (if the file is a PDF or image).
+	ruby app.rb -f test-file.pdf -c preview
 	```
+This will generate an image preview for the test-file.pdf (if the file is a PDF or image).
 
 2. Extract Text:
 
 	```
-		ruby app.rb -f test-file.pdf -c text
-		This will extract text from the PDF file and save it as a .txt file in the root directory.
-	```
+	ruby app.rb -f test-file.pdf -c text
+This will extract text from the PDF file and save it as a .txt file in the root directory.
 
 3. Run Both Operations:
 
 	```
-		ruby app.rb -f test-file.pdf -c all
-	```
+	ruby app.rb -f test-file.pdf -c all
 
 This will both generate a preview and extract text from the file.
 
 ## Example:
 
-	```
-		ruby app.rb -f test-file.pdf -c all
-	```
+
+	ruby app.rb -f test-file.pdf -c all
 This will:
 
 - Create a preview for the test-file.pdf (saved as test-file.preview.png).
@@ -71,9 +67,8 @@ This will:
 ## Running Tests
 This application uses RSpec for testing. You can run the tests using the following command:
 
-	```
-		bundle exec rspec
-	```
+
+	bundle exec rspec
 This will run all the tests defined in the spec directory. If any tests fail, you’ll get detailed output in the console.
 
 # Dockerization
@@ -82,15 +77,13 @@ This application can be run within a Docker container. To run the application in
 - Build the Docker image:
 
 	```
-		docker build -t file-processing-app .
-	```
+	docker build -t file-processing-app .
 
 - Run the Docker container:
 
 	```
-		docker run -v $(pwd):/app file-processing-app ruby app.rb -f test-file.pdf -c all
-	```
+	docker run -v $(pwd):/app file-processing-app ruby app.rb -f test-file.pdf -c all
 This mounts your current directory to the /app directory in the container and runs the application.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License.
